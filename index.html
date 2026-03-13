@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Silent Death Ship List</title>
+<style>
+body{
+font-family: Arial;
+background:#0b0f1a;
+color:#e8e8e8;
+padding:40px;
+}
+h1{
+color:#7dd3ff;
+}
+li{
+margin:3px 0;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Silent Death Ship Registry</h1>
+<p>Complete list of all known Silent Death ships.</p>
+
+<ul id="ships"></ul>
+
+<script>
+fetch("ships.json")
+.then(r=>r.json())
+.then(data=>{
+let list=document.getElementById("ships")
+data.ships.forEach(ship=>{
+let li=document.createElement("li")
+li.textContent=ship
+list.appendChild(li)
+})
+})
+</script>
+
+</body>
+</html>
