@@ -1,2 +1,2 @@
 # silent-death-ships
-an alphabeticle list of all the ships in the game.
+an alphabetical list of all the ships in the game.
